@@ -5,4 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: FundComputacion_Semana_1
+- file: FundComputacion_Semana_2
 
