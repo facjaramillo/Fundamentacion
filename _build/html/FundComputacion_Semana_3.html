@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'FundComputacion_Semana_3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -396,7 +398,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="semana-3-diagramas-de-flujo">
+  <section class="tex2jax_ignore mathjax_ignore" id="semana-3-diagramas-de-flujo">
 <h1>Semana 3: Diagramas de flujo<a class="headerlink" href="#semana-3-diagramas-de-flujo" title="Link to this heading">#</a></h1>
 <section id="diagramas-de-control-de-flujo">
 <h2>3.1. Diagramas de control de flujo<a class="headerlink" href="#diagramas-de-control-de-flujo" title="Link to this heading">#</a></h2>
@@ -462,7 +464,7 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">Leer</span> <span class="pre">AÑO</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Leer</span> <span class="pre">AÑO</span> <span class="pre">ACTUAL</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Calcular</span> <span class="pre">EDAD,</span></code> EDAD = AÑO ACTUAL - AÑO</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Si</span></code> EDAD $\geq$ 18, <code class="docutils literal notranslate"><span class="pre">Imprimir,</span> <span class="pre">&quot;Credencial</span> <span class="pre">autorizada&quot;</span></code>
+<li><p><code class="docutils literal notranslate"><span class="pre">Si</span></code> EDAD <span class="math notranslate nohighlight">\(\geq\)</span> 18, <code class="docutils literal notranslate"><span class="pre">Imprimir,</span> <span class="pre">&quot;Credencial</span> <span class="pre">autorizada&quot;</span></code>
 <code class="docutils literal notranslate"><span class="pre">Si</span> <span class="pre">no,</span> <span class="pre">Imprimir</span> <span class="pre">&quot;Credencial</span> <span class="pre">no</span> <span class="pre">autorizada&quot;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Fin</span></code></p></li>
 </ol>
@@ -494,8 +496,8 @@ document.write(`
 <li><p>Bucle mientras (while)</p></li>
 </ul>
 <p>Este tipo de bucle permite que una operación se realice <em>mientras</em> se satisface una condición lógica. Si dicha condición no se satisface, el bucle se puede ejecutar “infinitas” veces. REalmente se ejecuta hasta que los recursos de memoria y procesamiento del computador se agoten.</p>
-<p><em>Ejemplo:</em> Calcular el mínimo valor del número entero $k$ para el cual $m&gt;2^k$.</p>
-<p>La entrada del problema es el número $m$ y la salida es el número entero $k$. La idea es incrementar en  una variable $k$ iniciada con el valor $0$ hasta que la variable $m$ sea más grande qué $2^k$. El pseudocódigo es:</p>
+<p><em>Ejemplo:</em> Calcular el mínimo valor del número entero <span class="math notranslate nohighlight">\(k\)</span> para el cual <span class="math notranslate nohighlight">\(m&gt;2^k\)</span>.</p>
+<p>La entrada del problema es el número <span class="math notranslate nohighlight">\(m\)</span> y la salida es el número entero <span class="math notranslate nohighlight">\(k\)</span>. La idea es incrementar en  una variable <span class="math notranslate nohighlight">\(k\)</span> iniciada con el valor <span class="math notranslate nohighlight">\(0\)</span> hasta que la variable <span class="math notranslate nohighlight">\(m\)</span> sea más grande qué <span class="math notranslate nohighlight">\(2^k\)</span>. El pseudocódigo es:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Real</span> <span class="pre">m</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Entero</span> <span class="pre">positivo</span> <span class="pre">k</span></code></p></li>
@@ -510,7 +512,7 @@ document.write(`
 <li><p>Bucle para (for)</p></li>
 </ul>
 <p>Los bucles <em>para</em> nos permiten realizar una operación una cantidad dada de veces, es decir, se debe indicar cuántas veces se deben realizar las operaciones.</p>
-<p><em>Ejemplo:</em> Obtener todos los valores de la fucnión trigonométrica $sin(\pi k)$, donde $k$ es un valor de entrada que va desde $0$. El pseudocódigo es:</p>
+<p><em>Ejemplo:</em> Obtener todos los valores de la fucnión trigonométrica <span class="math notranslate nohighlight">\(sin(\pi k)\)</span>, donde <span class="math notranslate nohighlight">\(k\)</span> es un valor de entrada que va desde <span class="math notranslate nohighlight">\(0\)</span>. El pseudocódigo es:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Real</span> <span class="pre">a,</span> <span class="pre">Funcion</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Entero</span> <span class="pre">positivo</span> <span class="pre">k,</span> <span class="pre">i</span></code></p></li>
@@ -545,12 +547,12 @@ document.write(`
 <section id="ejercicios">
 <h2>3.4. Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Elabore un algoritmo que dado dos números $n$ y $m$, haga las operaciones suma, resta, multiplicación y división.</p></li>
-<li><p>Elabore un algoritmo que calcule el promedio de $5$ valores ingresados por el usuario.</p></li>
-<li><p>Elabore un algoritmo que calcule el perímetro y el área de un polígono regular de $n$ lados.</p></li>
+<li><p>Elabore un algoritmo que dado dos números <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>, haga las operaciones suma, resta, multiplicación y división.</p></li>
+<li><p>Elabore un algoritmo que calcule el promedio de <span class="math notranslate nohighlight">\(5\)</span> valores ingresados por el usuario.</p></li>
+<li><p>Elabore un algoritmo que calcule el perímetro y el área de un polígono regular de <span class="math notranslate nohighlight">\(n\)</span> lados.</p></li>
 <li><p>Elabore un algoritmo que lea una temperatura en grados Fahrenheit y la convierta a grados centígrados y a grados Kelvin.</p></li>
 <li><p>Elabore un algoritmo que lea el valor de un ángulo en radianes y lo convierta a grados.</p></li>
-<li><p>Elabore un algoritmo que lea el nombre y apellido de una persona e imprima su correo institucional en el formato nombre.apellido&#64;udea.edu.co.</p></li>
+<li><p>Elabore un algoritmo que lea el nombre y apellido de una persona e imprima su correo institucional en el formato <a class="reference external" href="mailto:nombre&#46;apellido&#37;&#52;&#48;udea&#46;edu&#46;co">nombre<span>&#46;</span>apellido<span>&#64;</span>udea<span>&#46;</span>edu<span>&#46;</span>co</a>.</p></li>
 <li><p>Escriba un programa que lea el nombre y la edad de una persona, así como el año actual y muestre un mensaje en el que se informe el año en que la persona cumplirá 100 años.</p></li>
 <li><p>Elabore un algoritmo que lea la altura en metros de una persona y su peso en kilogramos y calcule el índice de masa corporal.</p></li>
 <li><p>Elabore un algoritmo que lea un número y un porcentaje y muestre el valor correspondiente al porcentaje solicitado.</p></li>
