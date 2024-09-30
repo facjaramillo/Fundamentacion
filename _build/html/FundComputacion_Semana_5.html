@@ -381,16 +381,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condicionales">Condicionales</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-if">Sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-else">Sentencia <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-elif">Sentencia <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condicionales">5.1. Condicionales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-if">5.1.1. Sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-else">5.1.2. Sentencia <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-elif">5.1.3. Sentencia <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclos">Ciclos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-for">Ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-while">Ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-break-continue-y-pass">Operadores <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">pass</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclos">5.2. Ciclos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-for">5.2.1. Ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-while">5.2.2. Ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-break-continue-y-pass">5.2.3. Operadores <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">pass</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -408,12 +408,12 @@ document.write(`
 <h1>Semana 5: Condicionales y Ciclos (<code class="docutils literal notranslate"><span class="pre">For</span></code> y <code class="docutils literal notranslate"><span class="pre">While</span></code>)<a class="headerlink" href="#semana-5-condicionales-y-ciclos-for-y-while" title="Link to this heading">#</a></h1>
 <p>En este punto ya hemos definido las diferentes operaciones aritméticas, hemos asignado valores numéricos, booleanos y cadenas de caracteres a variables. Ahora, al igual que como lo hacíamos cuando creábamos nuestros pseudo-códigos, definiremos condicionales y ciclos en Python.</p>
 <section id="condicionales">
-<h2>Condicionales<a class="headerlink" href="#condicionales" title="Link to this heading">#</a></h2>
+<h2>5.1. Condicionales<a class="headerlink" href="#condicionales" title="Link to this heading">#</a></h2>
 <p>Un condicional es una sentencia que nos permite verificar si se cumple una condición, y establecer dos posibles ejecuciones de acuerdo a si se cumple o no la condición. En un diagrama de flujo, se vería como sigue:</p>
 <p><img alt="" src="https://i.imgur.com/O6cZrw0.png" /></p>
 <p><a class="reference external" href="https://www.programaenpython.com/fundamentos/sentencias-condicionales-en-python/">Referencia de Python sobre condicionales</a></p>
 <section id="sentencia-if">
-<h3>Sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#sentencia-if" title="Link to this heading">#</a></h3>
+<h3>5.1.1. Sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#sentencia-if" title="Link to this heading">#</a></h3>
 <p>Permite dividir el flujo de un programa en diferentes caminos u opciones. El bloque de código dentro del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code> se ejecuta siempre que la condición sea <strong>True</strong>.</p>
 <p><strong>Ejemplo:</strong></p>
 <div class="cell docutils container">
@@ -458,7 +458,7 @@ Ya estamos fuera del if
 </div>
 </section>
 <section id="sentencia-else">
-<h3>Sentencia <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#sentencia-else" title="Link to this heading">#</a></h3>
+<h3>5.1.2. Sentencia <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#sentencia-else" title="Link to this heading">#</a></h3>
 <p>La declaración <code class="docutils literal notranslate"><span class="pre">else</span></code> es una estructura de control de flujo que se utiliza junto con la declaración <code class="docutils literal notranslate"><span class="pre">if</span></code> o la declaración <code class="docutils literal notranslate"><span class="pre">elif</span></code>. Si todas las condiciones en las declaraciones <code class="docutils literal notranslate"><span class="pre">if</span></code> y <code class="docutils literal notranslate"><span class="pre">elif</span></code> son falsas, se ejecuta el bloque de código dentro de la declaración else. La declaración else es opcional y sólo se ejecuta si no se cumple ninguna de las condiciones anteriores.</p>
 <p><strong>Ejemplo:</strong> Determinar si un número es par o impar</p>
 <div class="cell docutils container">
@@ -504,7 +504,7 @@ Ya estamos fuera del if
 </div>
 </section>
 <section id="sentencia-elif">
-<h3>Sentencia <code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#sentencia-elif" title="Link to this heading">#</a></h3>
+<h3>5.1.3. Sentencia <code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#sentencia-elif" title="Link to this heading">#</a></h3>
 <p>La declaración <code class="docutils literal notranslate"><span class="pre">elif</span></code> es una extensión de la declaración <code class="docutils literal notranslate"><span class="pre">if</span></code> que permite verificar múltiples condiciones en una sola estructura de control de flujo. Si la condición en la declaración <code class="docutils literal notranslate"><span class="pre">if</span></code> es falsa, se verifica la siguiente condición en la declaración <code class="docutils literal notranslate"><span class="pre">elif</span></code>. Si se cumple la condición, el bloque de código dentro del elif se ejecuta. Si la condición es falsa, se omite el bloque de código y se verifica la siguiente condición en la siguiente declaración <code class="docutils literal notranslate"><span class="pre">elif</span></code> o en la declaración <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
 <p><strong>Ejemplo:</strong></p>
 <div class="cell docutils container">
@@ -585,9 +585,9 @@ El número es mayor que 2
 </section>
 </section>
 <section id="ciclos">
-<h2>Ciclos<a class="headerlink" href="#ciclos" title="Link to this heading">#</a></h2>
+<h2>5.2. Ciclos<a class="headerlink" href="#ciclos" title="Link to this heading">#</a></h2>
 <section id="ciclo-for">
-<h3>Ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#ciclo-for" title="Link to this heading">#</a></h3>
+<h3>5.2.1. Ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#ciclo-for" title="Link to this heading">#</a></h3>
 <p>El ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>  es una esctructura de ciclo usada en los casos donde conozco los elementos o la cantidad de elementos a iterar.</p>
 <p><a class="reference external" href="https://docs.python.org/es/3.12/reference/compound_stmts.html#the-for-statement">Referencia de Python sobre la sentencia for</a></p>
 <p>La sintaxis para definir un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> es:</p>
@@ -688,7 +688,7 @@ El número es mayor que 2
 </div>
 </section>
 <section id="ciclo-while">
-<h3>Ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#ciclo-while" title="Link to this heading">#</a></h3>
+<h3>5.2.2. Ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#ciclo-while" title="Link to this heading">#</a></h3>
 <p>El ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code> se basa en repetir un bloque de códigos a partir de una condición establecida. El bloque <code class="docutils literal notranslate"><span class="pre">while</span></code> se ejecutará siempre y cuando el resultado de la condición sea <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p><a class="reference external" href="https://docs.python.org/es/3.12/reference/compound_stmts.html#the-while-statement">Referencia de Python sobre la sentencia While</a></p>
 <p><strong>Ejemplo:</strong> ciclo infinito</p>
@@ -784,7 +784,7 @@ Salir
 </div>
 </section>
 <section id="operadores-break-continue-y-pass">
-<h3>Operadores <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">pass</span></code><a class="headerlink" href="#operadores-break-continue-y-pass" title="Link to this heading">#</a></h3>
+<h3>5.2.3. Operadores <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">pass</span></code><a class="headerlink" href="#operadores-break-continue-y-pass" title="Link to this heading">#</a></h3>
 <p>Estos operadores son útiles para el contro de flujo de ciclos.</p>
 <p>La instrucción <code class="docutils literal notranslate"><span class="pre">break</span></code> sirve para “romper” el ciclo.</p>
 <p><img alt="" src="https://i.imgur.com/JZ8kQIM.png" /></p>
@@ -997,16 +997,16 @@ i = 5
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condicionales">Condicionales</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-if">Sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-else">Sentencia <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-elif">Sentencia <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condicionales">5.1. Condicionales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-if">5.1.1. Sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-else">5.1.2. Sentencia <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencia-elif">5.1.3. Sentencia <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclos">Ciclos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-for">Ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-while">Ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-break-continue-y-pass">Operadores <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">pass</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclos">5.2. Ciclos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-for">5.2.1. Ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-while">5.2.2. Ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-break-continue-y-pass">5.2.3. Operadores <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">pass</span></code></a></li>
 </ul>
 </li>
 </ul>
