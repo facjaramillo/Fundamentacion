@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: FundComputacion_Semana_1
+- file: FundComputacion_Semana_2
+- file: FundComputacion_Semana_3
+- file: FundComputacion_Semana_4
+- file: FundComputacion_Semana_5
+
+
