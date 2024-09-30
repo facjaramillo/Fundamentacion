@@ -17,19 +17,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-numero = int(input("Ingrese un número: "))
+numero = int(input("Ingrese un numero: "))
+
 if numero%2 == 0:
-    print("El número es par")
+    print("El numero es par")
 else:
-    print("El número es impar")
+    print("El numero es impar")
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
 Input [0;32mIn [3][0m, in [0;36m<cell line: 1>[0;34m()[0m
-[0;32m----> 1[0m numero [38;5;241m=[39m [38;5;28mint[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mIngrese un número: [39;49m[38;5;124;43m"[39;49m[43m)[49m)
-[1;32m      2[0m [38;5;28;01mif[39;00m numero[38;5;241m%[39m[38;5;241m2[39m [38;5;241m==[39m [38;5;241m0[39m:
-[1;32m      3[0m     [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mEl número es par[39m[38;5;124m"[39m)
+[0;32m----> 1[0m numero [38;5;241m=[39m [38;5;28mint[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mIngrese un numero: [39;49m[38;5;124;43m"[39;49m[43m)[49m)
+[1;32m      3[0m [38;5;28;01mif[39;00m numero[38;5;241m%[39m[38;5;241m2[39m [38;5;241m==[39m [38;5;241m0[39m:
+[1;32m      4[0m     [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mEl numero es par[39m[38;5;124m"[39m)
 
 File [0;32m~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1072[0m, in [0;36mKernel.raw_input[0;34m(self, prompt)[0m
 [1;32m   1065[0m [38;5;250m[39m[38;5;124;03m"""Forward raw_input to frontends[39;00m
