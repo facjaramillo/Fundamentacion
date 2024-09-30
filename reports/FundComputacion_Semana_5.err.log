@@ -17,20 +17,17 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-a = int(input("Ingrese un número: "))
-
-if a >= 2:
-    print("El número es mayor que 2")
-if a >= 3:
-    print("El número es mayor que 3")
+while True: #Ciclo infinito
+    print("Hola")
+    input("Cómo te llamas: ")
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-Input [0;32mIn [6][0m, in [0;36m<cell line: 1>[0;34m()[0m
-[0;32m----> 1[0m a [38;5;241m=[39m [38;5;28mint[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mIngrese un número: [39;49m[38;5;124;43m"[39;49m[43m)[49m)
-[1;32m      3[0m [38;5;28;01mif[39;00m a [38;5;241m>[39m[38;5;241m=[39m [38;5;241m2[39m:
-[1;32m      4[0m     [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mEl número es mayor que 2[39m[38;5;124m"[39m)
+Input [0;32mIn [12][0m, in [0;36m<cell line: 2>[0;34m()[0m
+[1;32m      1[0m [38;5;28;01mwhile[39;00m [38;5;28;01mTrue[39;00m: [38;5;66;03m#Ciclo infinito[39;00m
+[1;32m      2[0m     [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mHola[39m[38;5;124m"[39m)
+[0;32m----> 3[0m     [38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mCómo te llamas: [39;49m[38;5;124;43m"[39;49m[43m)[49m
 
 File [0;32m~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1072[0m, in [0;36mKernel.raw_input[0;34m(self, prompt)[0m
 [1;32m   1065[0m [38;5;250m[39m[38;5;124;03m"""Forward raw_input to frontends[39;00m
