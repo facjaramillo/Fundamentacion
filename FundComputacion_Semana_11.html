@@ -430,62 +430,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="c1">#import matplotlib</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;seaborn-v0_8&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/style/core.py:127,</span> in <span class="ni">use</span><span class="nt">(style)</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">127</span>     <span class="n">rc</span> <span class="o">=</span> <span class="n">rc_params_from_file</span><span class="p">(</span><span class="n">style</span><span class="p">,</span> <span class="n">use_default_template</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span>     <span class="n">_apply_style</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/__init__.py:852,</span> in <span class="ni">rc_params_from_file</span><span class="nt">(fname, fail_on_error, use_default_template)</span>
-<span class="g g-Whitespace">    </span><span class="mi">838</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">839</span><span class="sd"> Construct a `RcParams` from file *fname*.</span>
-<span class="g g-Whitespace">    </span><span class="mi">840</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="nn">    850     parameters specified</span> in <span class="ni">the file. </span><span class="nt">(Useful for updating dicts.)</span>
-<span class="g g-Whitespace">    </span><span class="mi">851</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">852</span> <span class="n">config_from_file</span> <span class="o">=</span> <span class="n">_rc_params_in_file</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="o">=</span><span class="n">fail_on_error</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">854</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">use_default_template</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/__init__.py:778,</span> in <span class="ni">_rc_params_in_file</span><span class="nt">(fname, transform, fail_on_error)</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="n">rc_temp</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="k">with</span> <span class="n">_open_file_or_url</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span>     <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/contextlib.py:119,</span> in <span class="ni">_GeneratorContextManager.__enter__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">119</span>     <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">120</span> <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/__init__.py:755,</span> in <span class="ni">_open_file_or_url</span><span class="nt">(fname)</span>
-<span class="g g-Whitespace">    </span><span class="mi">754</span>     <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">755</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">756</span>     <span class="k">yield</span> <span class="n">f</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;seaborn-v0_8&#39;
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1">#import matplotlib</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;seaborn-v0_8&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/style/core.py:130,</span> in <span class="ni">use</span><span class="nt">(style)</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span>     <span class="n">_apply_style</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">129</span> <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">130</span>     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="s2">&quot;</span><span class="si">{!r}</span><span class="s2"> not found in the style library and input is not a &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">132</span>         <span class="s2">&quot;valid URL or path; see `style.available` for list of &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s2">&quot;available styles&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">style</span><span class="p">))</span> <span class="kn">from</span> <span class="nn">err</span>
-
-<span class="ne">OSError</span>: &#39;seaborn-v0_8&#39; not found in the style library and input is not a valid URL or path; see `style.available` for list of available styles
 </pre></div>
 </div>
 </div>
@@ -499,7 +443,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/963b6d3b42d05e367ee88e8759fac78fef56790680086bf31fe6ed12a89b10e5.png" src="_images/963b6d3b42d05e367ee88e8759fac78fef56790680086bf31fe6ed12a89b10e5.png" />
+<img alt="_images/acf8b18dcf2c5918dca86ee7dd477a1e58f3bc043cdd9a261c9cab3c24addebd.png" src="_images/acf8b18dcf2c5918dca86ee7dd477a1e58f3bc043cdd9a261c9cab3c24addebd.png" />
 </div>
 </div>
 <p>A través de los métodos y atributos de estos objetos personalizaremos la visualización. (Puede consultar todos los atributos y métodos de la clase <code class="docutils literal notranslate"><span class="pre">axes</span></code> en este <a class="reference external" href="https://matplotlib.org/3.1.1/api/axes_api.html#array">link</a>).</p>
@@ -520,10 +464,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x788b6d9508e0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0ce4486af0&gt;]
 </pre></div>
 </div>
-<img alt="_images/51769f124edcdd84217f71398dcb30beafaab1f8f9d805124c88ee19c123d7a6.png" src="_images/51769f124edcdd84217f71398dcb30beafaab1f8f9d805124c88ee19c123d7a6.png" />
+<img alt="_images/7597e7a6d67638986c573abb0e21b84628782b88f741184407b6d6f4eb6a732c.png" src="_images/7597e7a6d67638986c573abb0e21b84628782b88f741184407b6d6f4eb6a732c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -584,7 +528,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;sin(x)&#39;)
 </pre></div>
 </div>
-<img alt="_images/99f30b81f37f3579d25a589aa4ed45b3f73d9e5088ba52591d6bc990dc6d804f.png" src="_images/99f30b81f37f3579d25a589aa4ed45b3f73d9e5088ba52591d6bc990dc6d804f.png" />
+<img alt="_images/8a71626b26a7e010d9f26f99eca1c7b844090f62ff5b3318c44a2d9e4d923ac4.png" src="_images/8a71626b26a7e010d9f26f99eca1c7b844090f62ff5b3318c44a2d9e4d923ac4.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -612,7 +556,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Ejemplo clase computación&#39;)
 </pre></div>
 </div>
-<img alt="_images/9a2d049ef3549876da19c65844e8011d7b4f7014ab288ad23c6b118fd131b154.png" src="_images/9a2d049ef3549876da19c65844e8011d7b4f7014ab288ad23c6b118fd131b154.png" />
+<img alt="_images/3b16b15c2f54066c841d3558c784a0329a0292f42adf880342fd685dfdeab0cd.png" src="_images/3b16b15c2f54066c841d3558c784a0329a0292f42adf880342fd685dfdeab0cd.png" />
 </div>
 </div>
 <p><strong>Leyenda:</strong> Para agregar una leyenda a la gráfica, utilizamos el kwarg <code class="docutils literal notranslate"><span class="pre">label</span></code> de <code class="docutils literal notranslate"><span class="pre">ax.plot</span></code>. Para que la leyenda se muestre debemos ejecutar el método <code class="docutils literal notranslate"><span class="pre">ax.legend</span></code></p>
@@ -641,7 +585,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/6ed55211a1ebccbce2d4d4530eb64ecf17c9760a0be7347510cb5f87b96c8cbe.png" src="_images/6ed55211a1ebccbce2d4d4530eb64ecf17c9760a0be7347510cb5f87b96c8cbe.png" />
+<img alt="_images/7a67561a014243a3d3b79d1969f7f32238345de0aa6608d1b04802a999705834.png" src="_images/7a67561a014243a3d3b79d1969f7f32238345de0aa6608d1b04802a999705834.png" />
 </div>
 </div>
 <p>En el estilo orientado a objetos, en lugar de llamar las funciones que contienen el prefijo <code class="docutils literal notranslate"><span class="pre">set</span></code> individualmente, es más conveniente usar el método <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code> para establecer todas estas propiedades a la vez:</p>
@@ -670,10 +614,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7872f5b49ab0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f0ce41be040&gt;
 </pre></div>
 </div>
-<img alt="_images/726bfb167cb6ca5395b18b73d0ead5919a5d1da7b4fcb4c01f52aecb37cea7a6.png" src="_images/726bfb167cb6ca5395b18b73d0ead5919a5d1da7b4fcb4c01f52aecb37cea7a6.png" />
+<img alt="_images/bf5aec5574602ae96710417f1e491893f724b092d6649c64d36316c0095b43f6.png" src="_images/bf5aec5574602ae96710417f1e491893f724b092d6649c64d36316c0095b43f6.png" />
 </div>
 </div>
 <p><strong>Tamaño de la figura:</strong> Podemos modificar el tamaño de la figura utilizando el argumento por palabra clave <code class="docutils literal notranslate"><span class="pre">figsize</span></code> (en el cual debemos definir una tupla que corresponde al tamaño en <span class="math notranslate nohighlight">\(x\)</span> y en <span class="math notranslate nohighlight">\(y\)</span> de la figura) en la función <code class="docutils literal notranslate"><span class="pre">subplots</span></code></p>
@@ -703,7 +647,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3af05e3317cf5745b73a6218ac7f47ba5e515021bf426514431f701966088b58.png" src="_images/3af05e3317cf5745b73a6218ac7f47ba5e515021bf426514431f701966088b58.png" />
+<img alt="_images/bf5aec5574602ae96710417f1e491893f724b092d6649c64d36316c0095b43f6.png" src="_images/bf5aec5574602ae96710417f1e491893f724b092d6649c64d36316c0095b43f6.png" />
 </div>
 </div>
 <p>Si queremos definir el tamaño de la figura de forma global, podemos utilizar <code class="docutils literal notranslate"><span class="pre">plt.rcParams[&quot;figure.figsize&quot;]</span></code></p>
@@ -736,22 +680,22 @@ document.write(`
  &#39;fivethirtyeight&#39;,
  &#39;ggplot&#39;,
  &#39;grayscale&#39;,
- &#39;seaborn-v0_8&#39;,
- &#39;seaborn-v0_8-bright&#39;,
- &#39;seaborn-v0_8-colorblind&#39;,
- &#39;seaborn-v0_8-dark&#39;,
- &#39;seaborn-v0_8-dark-palette&#39;,
- &#39;seaborn-v0_8-darkgrid&#39;,
- &#39;seaborn-v0_8-deep&#39;,
- &#39;seaborn-v0_8-muted&#39;,
- &#39;seaborn-v0_8-notebook&#39;,
- &#39;seaborn-v0_8-paper&#39;,
- &#39;seaborn-v0_8-pastel&#39;,
- &#39;seaborn-v0_8-poster&#39;,
- &#39;seaborn-v0_8-talk&#39;,
- &#39;seaborn-v0_8-ticks&#39;,
- &#39;seaborn-v0_8-white&#39;,
- &#39;seaborn-v0_8-whitegrid&#39;,
+ &#39;seaborn&#39;,
+ &#39;seaborn-bright&#39;,
+ &#39;seaborn-colorblind&#39;,
+ &#39;seaborn-dark&#39;,
+ &#39;seaborn-dark-palette&#39;,
+ &#39;seaborn-darkgrid&#39;,
+ &#39;seaborn-deep&#39;,
+ &#39;seaborn-muted&#39;,
+ &#39;seaborn-notebook&#39;,
+ &#39;seaborn-paper&#39;,
+ &#39;seaborn-pastel&#39;,
+ &#39;seaborn-poster&#39;,
+ &#39;seaborn-talk&#39;,
+ &#39;seaborn-ticks&#39;,
+ &#39;seaborn-white&#39;,
+ &#39;seaborn-whitegrid&#39;,
  &#39;tableau-colorblind10&#39;]
 </pre></div>
 </div>
@@ -791,7 +735,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/1c395b7ffacf5700ace8490d2b0dbab366d506331ce7c0974881a1bd6e587589.png" src="_images/1c395b7ffacf5700ace8490d2b0dbab366d506331ce7c0974881a1bd6e587589.png" />
+<img alt="_images/4479ef4ebfc5ed95e0215a9352fc7aaf291faf1a320bea9825e4bd47a893b843.png" src="_images/4479ef4ebfc5ed95e0215a9352fc7aaf291faf1a320bea9825e4bd47a893b843.png" />
 </div>
 </div>
 <p>Configurando marker podemos establecer la forma que queremos que tenga el punto en la gráfica, consulte la documentación de matplotlib para más <a class="reference external" href="https://matplotlib.org/stable/api/markers_api.html">marcadores</a>.</p>
@@ -824,7 +768,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d31a2f62309dc74a41dc7b862fcfe42f11f1a879905f69e4db384c47ee5b3c40.png" src="_images/d31a2f62309dc74a41dc7b862fcfe42f11f1a879905f69e4db384c47ee5b3c40.png" />
+<img alt="_images/7f063d9c1e671f7a4f539699e272ac38f1bc0166e1e8091cb8f722fdbf25dffc.png" src="_images/7f063d9c1e671f7a4f539699e272ac38f1bc0166e1e8091cb8f722fdbf25dffc.png" />
 </div>
 </div>
 <p>El estilo de las líneas se especifica con <code class="docutils literal notranslate"><span class="pre">linestyle</span></code>:</p>
@@ -851,7 +795,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;numpy.ndarray&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/6a3392d1e0c67b33aeecc43879be239b76c308aec447e5936c96a248b72d8122.png" src="_images/6a3392d1e0c67b33aeecc43879be239b76c308aec447e5936c96a248b72d8122.png" />
+<img alt="_images/2ece3a1c3a9a60c67bbcc3978a13a4f02a44723026a57c24d316b131ce624da7.png" src="_images/2ece3a1c3a9a60c67bbcc3978a13a4f02a44723026a57c24d316b131ce624da7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -861,7 +805,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&lt;AxesSubplot:&gt;, &lt;AxesSubplot:&gt;], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -892,7 +836,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/66f2a4d0de9a9f993a12a85681c4b10bd2595ef4c5e47f762df823d44e48abd1.png" src="_images/66f2a4d0de9a9f993a12a85681c4b10bd2595ef4c5e47f762df823d44e48abd1.png" />
+<img alt="_images/bee6c48e79e27b5fdc418cd8ebda943717ee2680756a505a7c9b9cf0727d88f3.png" src="_images/bee6c48e79e27b5fdc418cd8ebda943717ee2680756a505a7c9b9cf0727d88f3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -930,7 +874,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/86e6db18cd47f13a587db21340685411ab19d2304375409f3912f10f087a3120.png" src="_images/86e6db18cd47f13a587db21340685411ab19d2304375409f3912f10f087a3120.png" />
+<img alt="_images/993dc311150cb9fec4bbf77f5e5eeb43267240e913ceacd05e524cac8ba85334.png" src="_images/993dc311150cb9fec4bbf77f5e5eeb43267240e913ceacd05e524cac8ba85334.png" />
 </div>
 </div>
 <p><strong>NOTAS:</strong></p>
@@ -981,7 +925,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Etiqueta del eje Z&#39;)
 </pre></div>
 </div>
-<img alt="_images/4a6533defe06cbcc3125724fd2a82cd99878d50363d4c0e8f115e59ece29d06f.png" src="_images/4a6533defe06cbcc3125724fd2a82cd99878d50363d4c0e8f115e59ece29d06f.png" />
+<img alt="_images/b29a803ccb87d11f77cae091bac04724a98759b18483fed6dc36f1e7faf6b54e.png" src="_images/b29a803ccb87d11f77cae091bac04724a98759b18483fed6dc36f1e7faf6b54e.png" />
 </div>
 </div>
 </section>
@@ -1010,10 +954,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7a687c16b250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f0cd182fe50&gt;
 </pre></div>
 </div>
-<img alt="_images/ff0265ca9e337d2c35cf3cbb1fd0dd2bceb271df72d084e76f7c7cd48567607b.png" src="_images/ff0265ca9e337d2c35cf3cbb1fd0dd2bceb271df72d084e76f7c7cd48567607b.png" />
+<img alt="_images/11483531617c2f6989a82f52c57b8dfc424e79a11350078bff8efb57541b6ae4.png" src="_images/11483531617c2f6989a82f52c57b8dfc424e79a11350078bff8efb57541b6ae4.png" />
 </div>
 </div>
 </section>
