@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Fundamentación en Computación
-author: Fabio Cardona Jaramillo, Esteban Silva, Juan Vásquez, David Suárez
+author: Fabio Cardona Jaramillo, Esteban Silva Villa, Juan Vásquez Betancur, David Suárez Roldán
 logo: UdeA.png
 
 # Force re-execution of notebooks on each build.
