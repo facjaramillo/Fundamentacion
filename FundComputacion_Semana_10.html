@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>10.1. Definición &#8212; Fundamentación en Computación</title>
+    <title>Semana 10: Arreglos de NumPy &#8212; Fundamentación en Computación</title>
   
   
   
@@ -191,10 +191,7 @@
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_7.html">Semana 7: Conjuntos y Diccionarios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_8.html">Semana 8: escritura y lectura de acrhivos con Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_9.html">Semana 9: Funciones</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">10.1. Definición</a></li>
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Semana 10: Arreglos de NumPy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_11.html">Semana 11: Graficación con Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_12.html">Semana 12: Pandas 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_13.html">Semana 13: Análisis exploratorio de datos con PANDAS y NUMPY</a></li>
@@ -383,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>10.1. Definición</h1>
+    <h1>Semana 10: Arreglos de NumPy</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,26 +390,25 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">10.1. Definición</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dtype">10.1.1. <code class="docutils literal notranslate"><span class="pre">dtype</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ndim-y-size">10.1.2. <code class="docutils literal notranslate"><span class="pre">ndim</span></code> y <code class="docutils literal notranslate"><span class="pre">size</span></code>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shape">10.1.3. <code class="docutils literal notranslate"><span class="pre">shape</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traspuesta">10.1.4. Traspuesta</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape">10.1.5. <code class="docutils literal notranslate"><span class="pre">reshape</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion">10.1. Definición</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dtype">10.1.1. <code class="docutils literal notranslate"><span class="pre">dtype</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ndim-y-size">10.1.2. <code class="docutils literal notranslate"><span class="pre">ndim</span></code> y <code class="docutils literal notranslate"><span class="pre">size</span></code>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shape">10.1.3. <code class="docutils literal notranslate"><span class="pre">shape</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traspuesta">10.1.4. Traspuesta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape">10.1.5. <code class="docutils literal notranslate"><span class="pre">reshape</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-alternativas-de-construir-arreglos">10.2. Formas alternativas de construir arreglos</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#np-arange">10.2.1. <code class="docutils literal notranslate"><span class="pre">np.arange</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#np-linspace">10.2.2. <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#np-zeros-y-np-ones">10.2.3. <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> y <code class="docutils literal notranslate"><span class="pre">np.ones</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#np-full">10.2.4. <code class="docutils literal notranslate"><span class="pre">np.full</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arreglos-aleatorios">10.2.5. Arreglos aleatorios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-alternativas-de-construir-arreglos">10.2. Formas alternativas de construir arreglos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-arange">10.2.1. <code class="docutils literal notranslate"><span class="pre">np.arange</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-linspace">10.2.2. <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-zeros-y-np-ones">10.2.3. <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> y <code class="docutils literal notranslate"><span class="pre">np.ones</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-full">10.2.4. <code class="docutils literal notranslate"><span class="pre">np.full</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arreglos-aleatorios">10.2.5. Arreglos aleatorios</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-universales">10.3. Funciones universales</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indexacion">10.4. Indexación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-universales">10.3. Funciones universales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexacion">10.4. Indexación</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -423,7 +419,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>#Semana 10: Arreglos de NumPy</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="semana-10-arreglos-de-numpy">
+<h1>Semana 10: Arreglos de NumPy<a class="headerlink" href="#semana-10-arreglos-de-numpy" title="Link to this heading">#</a></h1>
 <p>Numpy (Numerical Python)</p>
 <p>Numpy es la librería fundamental para la computación científica de alto rendimiento y el análisis de datos. Es una libreria que proporciona herramientas para la generación de arreglos y una variedad de funcionalidades para realizar operaciones sobre estos. Numpy se utiliza como bloque básico para una gran cantidad de librerías científicas y de análisis de datos. Dentro de sus utilidades y ventajas, sobresale porque:</p>
 <ul class="simple">
@@ -434,7 +431,7 @@ document.write(`
 </ul>
 <p><img alt="" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-020-2649-2/MediaObjects/41586_2020_2649_Fig2_HTML.png?as=webp" /></p>
 <section id="definicion">
-<h1>10.1. Definición<a class="headerlink" href="#definicion" title="Link to this heading">#</a></h1>
+<h2>10.1. Definición<a class="headerlink" href="#definicion" title="Link to this heading">#</a></h2>
 <p>En el núcleo de Numpy, está el objeto <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> (n-dimensional array). Este encapsula <strong>arreglos n-dimensionales</strong> de tipos de datos homogéneos, con muchas <strong>operaciones que se realizan en código compilado</strong>, con lo cual se mejora el rendimiento significativamente.</p>
 <p>Por convención, la librería Numpy se import con el alias <code class="docutils literal notranslate"><span class="pre">np</span></code>:</p>
 <div class="cell docutils container">
@@ -481,8 +478,8 @@ document.write(`
 <span class="n">lista</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]]</span>
 
 
-<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>  <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>   <span class="p">])</span>
-<span class="n">x2</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>  <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>   <span class="p">])</span>
+<span class="n">x</span>
 <span class="c1">#, [[1,2,3],[4,5,6],[7,8,9],[10,11,12]]</span>
 </pre></div>
 </div>
@@ -500,23 +497,18 @@ document.write(`
 <p><img alt="" src="https://i.imgur.com/gqeCxo2.png" /></p>
 <p>El arreglo de Numpy contiene una serie de atributos y métodos que definen su estructura. Veamos algunos de los atributos más importantes de este objeto:</p>
 <section id="dtype">
-<h2>10.1.1. <code class="docutils literal notranslate"><span class="pre">dtype</span></code><a class="headerlink" href="#dtype" title="Link to this heading">#</a></h2>
+<h3>10.1.1. <code class="docutils literal notranslate"><span class="pre">dtype</span></code><a class="headerlink" href="#dtype" title="Link to this heading">#</a></h3>
 <p>Este determina el tipo de dato de cada elemento del arreglo. El sistema predeterminado de <code class="docutils literal notranslate"><span class="pre">dtypes</span></code> que proporciona Numpy es más preciso y más amplio para los tipos básicos que el sistema de tipos que implementa Python</p>
-<p><img alt="Colaboratory logo" height="400px" src="https://i.imgur.com/2RpU9w1.png" align="left" hspace="10px" vspace="0px"></p><div class="cell docutils container">
+<p><img alt="" src="https://i.imgur.com/2RpU9w1.png%22" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tipo de dato contenido en el arreglo</span>
-<span class="n">x1</span><span class="o">.</span><span class="n">dtype</span>
+<span class="n">x</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># tipo de dato contenido en el arreglo</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">x1</span><span class="o">.</span><span class="n">dtype</span>
-
-<span class="ne">NameError</span>: name &#39;x1&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;int64&#39;)
 </pre></div>
 </div>
 </div>
@@ -524,7 +516,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tipo de estructura</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -577,7 +569,7 @@ document.write(`
 </div>
 </section>
 <section id="ndim-y-size">
-<h2>10.1.2. <code class="docutils literal notranslate"><span class="pre">ndim</span></code> y <code class="docutils literal notranslate"><span class="pre">size</span></code>:<a class="headerlink" href="#ndim-y-size" title="Link to this heading">#</a></h2>
+<h3>10.1.2. <code class="docutils literal notranslate"><span class="pre">ndim</span></code> y <code class="docutils literal notranslate"><span class="pre">size</span></code>:<a class="headerlink" href="#ndim-y-size" title="Link to this heading">#</a></h3>
 <p>La dimensión y el número de elementos del arreglo se pueden obtener mediante los atributos <code class="docutils literal notranslate"><span class="pre">ndim</span></code> y <code class="docutils literal notranslate"><span class="pre">size</span></code>, respectivamente</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -645,7 +637,7 @@ document.write(`
 </div>
 </section>
 <section id="shape">
-<h2>10.1.3. <code class="docutils literal notranslate"><span class="pre">shape</span></code><a class="headerlink" href="#shape" title="Link to this heading">#</a></h2>
+<h3>10.1.3. <code class="docutils literal notranslate"><span class="pre">shape</span></code><a class="headerlink" href="#shape" title="Link to this heading">#</a></h3>
 <p>Tupla de enteros que representa el rango a lo largo de cada dimensión de los arreglos <span class="math notranslate nohighlight">\(n\)</span>-dimensionales.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -698,7 +690,7 @@ document.write(`
 </div>
 </section>
 <section id="traspuesta">
-<h2>10.1.4. Traspuesta<a class="headerlink" href="#traspuesta" title="Link to this heading">#</a></h2>
+<h3>10.1.4. Traspuesta<a class="headerlink" href="#traspuesta" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span><span class="o">.</span><span class="n">T</span>
@@ -714,7 +706,7 @@ document.write(`
 </div>
 </section>
 <section id="reshape">
-<h2>10.1.5. <code class="docutils literal notranslate"><span class="pre">reshape</span></code><a class="headerlink" href="#reshape" title="Link to this heading">#</a></h2>
+<h3>10.1.5. <code class="docutils literal notranslate"><span class="pre">reshape</span></code><a class="headerlink" href="#reshape" title="Link to this heading">#</a></h3>
 <p>Alternativamente, Numpy proporciona el método <code class="docutils literal notranslate"><span class="pre">reshape</span></code>, con el cual podemos cambiar la forma de un arreglo. Este toma como argumento el arreglo a modificar y un entero o tupla que represente la nueva forma. Esta nueva forma debe ser compatible con el número de elementos que tenga el arreglo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -734,6 +726,16 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x2</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [21],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">x2</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: cannot reshape array of size 8 into shape (2,2)
 </pre></div>
 </div>
 </div>
@@ -777,10 +779,10 @@ document.write(`
 </section>
 </section>
 <section id="formas-alternativas-de-construir-arreglos">
-<h1>10.2. Formas alternativas de construir arreglos<a class="headerlink" href="#formas-alternativas-de-construir-arreglos" title="Link to this heading">#</a></h1>
+<h2>10.2. Formas alternativas de construir arreglos<a class="headerlink" href="#formas-alternativas-de-construir-arreglos" title="Link to this heading">#</a></h2>
 <p>Numpy proporciona formas alternativas de crear arreglos</p>
 <section id="np-arange">
-<h2>10.2.1. <code class="docutils literal notranslate"><span class="pre">np.arange</span></code><a class="headerlink" href="#np-arange" title="Link to this heading">#</a></h2>
+<h3>10.2.1. <code class="docutils literal notranslate"><span class="pre">np.arange</span></code><a class="headerlink" href="#np-arange" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> toma un inicio, final y un paso como la función <code class="docutils literal notranslate"><span class="pre">range()</span></code> de Python, excepto que devuelve un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> y que el paso puede ser un número real. Su sintáxis es de la forma:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">inicio</span><span class="p">,</span> <span class="n">final</span><span class="p">,</span> <span class="n">paso</span><span class="p">)</span>
 </pre></div>
@@ -827,7 +829,7 @@ document.write(`
 </div>
 </section>
 <section id="np-linspace">
-<h2>10.2.2. <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code><a class="headerlink" href="#np-linspace" title="Link to this heading">#</a></h2>
+<h3>10.2.2. <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code><a class="headerlink" href="#np-linspace" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.linspace()</span></code> crea una serie de puntos uniformemente entre un límite inferior y superior que <strong>incluye ambos extremos</strong>. Su sintáxis es de la forma:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">inicio</span><span class="p">,</span> <span class="n">final</span><span class="p">,</span> <span class="n">numero</span> <span class="n">de</span> <span class="n">puntos</span><span class="p">)</span>
 </pre></div>
@@ -870,7 +872,7 @@ document.write(`
 </div>
 </section>
 <section id="np-zeros-y-np-ones">
-<h2>10.2.3. <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> y <code class="docutils literal notranslate"><span class="pre">np.ones</span></code><a class="headerlink" href="#np-zeros-y-np-ones" title="Link to this heading">#</a></h2>
+<h3>10.2.3. <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> y <code class="docutils literal notranslate"><span class="pre">np.ones</span></code><a class="headerlink" href="#np-zeros-y-np-ones" title="Link to this heading">#</a></h3>
 <p>Las funciones <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code> y <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code> toman un entero o una tupla de enteros como argumento y devuelven un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> cuya forma coincide con la de la tupla y cuyos elementos son cero o uno:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -901,7 +903,7 @@ document.write(`
 </div>
 </section>
 <section id="np-full">
-<h2>10.2.4. <code class="docutils literal notranslate"><span class="pre">np.full</span></code><a class="headerlink" href="#np-full" title="Link to this heading">#</a></h2>
+<h3>10.2.4. <code class="docutils literal notranslate"><span class="pre">np.full</span></code><a class="headerlink" href="#np-full" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.full()</span></code> funciona de manera similar a <code class="docutils literal notranslate"><span class="pre">zeros()</span></code> y <code class="docutils literal notranslate"><span class="pre">ones()</span></code>, solo que podemos llenar el arreglo con cualquier valor:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -919,7 +921,7 @@ document.write(`
 </div>
 </section>
 <section id="arreglos-aleatorios">
-<h2>10.2.5. Arreglos aleatorios<a class="headerlink" href="#arreglos-aleatorios" title="Link to this heading">#</a></h2>
+<h3>10.2.5. Arreglos aleatorios<a class="headerlink" href="#arreglos-aleatorios" title="Link to this heading">#</a></h3>
 <p>En muchas ocaciones vamos a necesitar construir arreglos cuyos elementos se generen de forma aleatoria. En estos casos podemos utilizar el submódulo <code class="docutils literal notranslate"><span class="pre">random</span></code> de la librería.</p>
 <p>La función <code class="docutils literal notranslate"><span class="pre">np.random.rand()</span></code> genera un arreglo cuyos elementos se muestrean de una distribución uniforme en el intervalo (0, 1).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
@@ -1076,7 +1078,7 @@ document.write(`
 </section>
 </section>
 <section id="funciones-universales">
-<h1>10.3. Funciones universales<a class="headerlink" href="#funciones-universales" title="Link to this heading">#</a></h1>
+<h2>10.3. Funciones universales<a class="headerlink" href="#funciones-universales" title="Link to this heading">#</a></h2>
 <p>De los ejemplos anteriores vemos que cuando los arreglos son de Numpy, se está realizando lo que se conoce como una operación <strong>vectorizada</strong>, la cual es una operación sobre los arreglos que se realiza <strong>elemento a elemento</strong>, mediante lo que conocemos como funciones universales (ufuncs) de Numpy. La siguiente tabla nos muestra algunas de las funciones universales disponibles en Numpy (ver <a class="reference external" href="https://Numpy.org/doc/stable/reference/ufuncs.html#ufunc">documentación</a>)</p>
 <p><img alt="picture" src="https://i.imgur.com/8HaZzxg.png" /></p>
 <div class="cell docutils container">
@@ -1136,7 +1138,7 @@ document.write(`
 </div>
 </section>
 <section id="indexacion">
-<h1>10.4. Indexación<a class="headerlink" href="#indexacion" title="Link to this heading">#</a></h1>
+<h2>10.4. Indexación<a class="headerlink" href="#indexacion" title="Link to this heading">#</a></h2>
 <p>Los arreglos de Numpy tienen el mismo esquema de indexación de las listas de Python. La diferencia es que, al ser objetos n-dimensionales, podemos indexar cada dimensión de forma independiente. Podemos pasar una tupla donde el primer elemento corresponde a la indexación que queremos implementar sobre las filas, mientras que el segundo corresponde a la selección de las columnas:</p>
 <p><strong>Ejemplo:</strong> Dada la lista</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
@@ -1449,6 +1451,7 @@ document.write(`
 </div>
 <p>Acá puede encontrar <a class="reference external" href="https://www.w3resource.com/python-exercises/numpy/index.php">ejercicios adicionales</a> relacionados con el objeto <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code></p>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1514,26 +1517,25 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">10.1. Definición</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dtype">10.1.1. <code class="docutils literal notranslate"><span class="pre">dtype</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ndim-y-size">10.1.2. <code class="docutils literal notranslate"><span class="pre">ndim</span></code> y <code class="docutils literal notranslate"><span class="pre">size</span></code>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shape">10.1.3. <code class="docutils literal notranslate"><span class="pre">shape</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traspuesta">10.1.4. Traspuesta</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape">10.1.5. <code class="docutils literal notranslate"><span class="pre">reshape</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion">10.1. Definición</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dtype">10.1.1. <code class="docutils literal notranslate"><span class="pre">dtype</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ndim-y-size">10.1.2. <code class="docutils literal notranslate"><span class="pre">ndim</span></code> y <code class="docutils literal notranslate"><span class="pre">size</span></code>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shape">10.1.3. <code class="docutils literal notranslate"><span class="pre">shape</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traspuesta">10.1.4. Traspuesta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape">10.1.5. <code class="docutils literal notranslate"><span class="pre">reshape</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-alternativas-de-construir-arreglos">10.2. Formas alternativas de construir arreglos</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#np-arange">10.2.1. <code class="docutils literal notranslate"><span class="pre">np.arange</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#np-linspace">10.2.2. <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#np-zeros-y-np-ones">10.2.3. <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> y <code class="docutils literal notranslate"><span class="pre">np.ones</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#np-full">10.2.4. <code class="docutils literal notranslate"><span class="pre">np.full</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arreglos-aleatorios">10.2.5. Arreglos aleatorios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-alternativas-de-construir-arreglos">10.2. Formas alternativas de construir arreglos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-arange">10.2.1. <code class="docutils literal notranslate"><span class="pre">np.arange</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-linspace">10.2.2. <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-zeros-y-np-ones">10.2.3. <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> y <code class="docutils literal notranslate"><span class="pre">np.ones</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-full">10.2.4. <code class="docutils literal notranslate"><span class="pre">np.full</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arreglos-aleatorios">10.2.5. Arreglos aleatorios</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-universales">10.3. Funciones universales</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indexacion">10.4. Indexación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-universales">10.3. Funciones universales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexacion">10.4. Indexación</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

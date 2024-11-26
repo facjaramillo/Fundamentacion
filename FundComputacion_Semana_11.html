@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Semana 12: Pandas 1" href="FundComputacion_Semana_12.html" />
-    <link rel="prev" title="10.1. Definición" href="FundComputacion_Semana_10.html" />
+    <link rel="prev" title="Semana 10: Arreglos de NumPy" href="FundComputacion_Semana_10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,10 +191,7 @@
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_7.html">Semana 7: Conjuntos y Diccionarios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_8.html">Semana 8: escritura y lectura de acrhivos con Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_9.html">Semana 9: Funciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_10.html">10.1. Definición</a></li>
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_10.html">Semana 10: Arreglos de NumPy</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Semana 11: Graficación con Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_12.html">Semana 12: Pandas 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_13.html">Semana 13: Análisis exploratorio de datos con PANDAS y NUMPY</a></li>
@@ -394,7 +391,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion">11.1. Definición</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leer-datos-como-arreglos-de-numpy">Leer datos como arreglos de NumPy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creando-figuras-y-ejes">11.2. Creando figuras y ejes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personalizacion-basica-del-grafico">11.3. Personalización básica del gráfico</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambiando-el-estilo-de-graficacion">11.4. Cambiando el estilo de graficación</a></li>
@@ -417,88 +413,14 @@ document.write(`
 <section id="definicion">
 <h2>11.1. Definición<a class="headerlink" href="#definicion" title="Link to this heading">#</a></h2>
 <p>Matplotlib es una herramienta para visualización de datos en Python, construida sobre arreglos de NumPy. Una visualización típica es de la siguiente forma:</p>
-<p><img alt="Colaboratory logo" height="300px" src="https://i.imgur.com/CN4dd50.jpg" align="left" hspace="10px" vspace="0px"></p><p><strong>Figure</strong></p>
-<p><img alt="Colaboratory logo" height="200px" src="https://i.imgur.com/LzKT7CG.jpg" align="left" hspace="10px" vspace="0px"></p><p><strong>Axes</strong>:</p>
-<p><img alt="Colaboratory logo" height="300px" src="https://i.imgur.com/9WmCGDP.jpg" align="left" hspace="10px" vspace="0px"></p><p><strong>Gráfica</strong></p>
-<p><img alt="Colaboratory logo" height="300px" src="https://i.imgur.com/kfaMZLp.jpg" align="left" hspace="10px" vspace="0px"></p><p>En resumen, la <em>figura</em> puede considerarse como un contenedor único que contiene todos los objetos que representan los ejes, gráficos y etiquetas. Por otra parte, el <em>conjunto de ejes</em> es un cuadro delimitador con marcas y etiquetas, que eventualmente contendrá los elementos del gráfico que componen nuestra visualización.</p>
-</section>
-<section id="leer-datos-como-arreglos-de-numpy">
-<h2>Leer datos como arreglos de NumPy<a class="headerlink" href="#leer-datos-como-arreglos-de-numpy" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">archivo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;/content/trayectorias_t100.txt&quot;</span><span class="p">)</span>
-
-<span class="n">archivo</span><span class="o">.</span><span class="n">ndim</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">archivo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;/content/trayectorias_t100.txt&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">archivo</span><span class="o">.</span><span class="n">ndim</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py:1793,</span> in <span class="ni">genfromtxt</span><span class="nt">(fname, dtype, comments, delimiter, skip_header, skip_footer, converters, missing_values, filling_values, usecols, names, excludelist, deletechars, replace_space, autostrip, case_sensitive, defaultfmt, unpack, usemask, loose, invalid_raise, max_rows, encoding, like)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1791</span>     <span class="n">fname</span> <span class="o">=</span> <span class="n">os_fspath</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1792</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1793</span>     <span class="n">fid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">_datasource</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1794</span>     <span class="n">fid_ctx</span> <span class="o">=</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">closing</span><span class="p">(</span><span class="n">fid</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1795</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/numpy/lib/_datasource.py:193,</span> in <span class="ni">open</span><span class="nt">(path, mode, destpath, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">156</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span><span class="sd"> Open `path` with `mode` and return the file object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">158</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">190</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">192</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">DataSource</span><span class="p">(</span><span class="n">destpath</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">193</span> <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/numpy/lib/_datasource.py:533,</span> in <span class="ni">DataSource.open</span><span class="nt">(self, path, mode, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>     <span class="k">return</span> <span class="n">_file_openers</span><span class="p">[</span><span class="n">ext</span><span class="p">](</span><span class="n">found</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span>                               <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">533</span>     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> not found.&quot;</span> <span class="o">%</span> <span class="n">path</span><span class="p">)</span>
-
-<span class="ne">OSError</span>: /content/trayectorias_t100.txt not found.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">archivo</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span>
-<span class="n">x</span><span class="o">.</span><span class="n">ndim</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">archivo</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">archivo</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">archivo</span><span class="p">[</span><span class="mi">4</span><span class="p">,:]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;trayectorias.dat&#39;</span><span class="p">,[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p><img alt="" src="https://i.imgur.com/CN4dd50.jpg" /></p>
+<p><strong>Figure:</strong></p>
+<p><img alt="" src="https://i.imgur.com/LzKT7CG.jpg" /></p>
+<p><strong>Axes:</strong></p>
+<p><img alt="" src="https://i.imgur.com/9WmCGDP.jpg" /></p>
+<p><strong>Gráfica:</strong></p>
+<p><img alt="" src="https://i.imgur.com/kfaMZLp.jpg" /></p>
+<p>En resumen, la <em>figura</em> puede considerarse como un contenedor único que contiene todos los objetos que representan los ejes, gráficos y etiquetas. Por otra parte, el <em>conjunto de ejes</em> es un cuadro delimitador con marcas y etiquetas, que eventualmente contendrá los elementos del gráfico que componen nuestra visualización.</p>
 </section>
 <section id="creando-figuras-y-ejes">
 <h2>11.2. Creando figuras y ejes<a class="headerlink" href="#creando-figuras-y-ejes" title="Link to this heading">#</a></h2>
@@ -509,6 +431,61 @@ document.write(`
 <span class="c1">#import matplotlib</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;seaborn-v0_8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/style/core.py:127,</span> in <span class="ni">use</span><span class="nt">(style)</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">127</span>     <span class="n">rc</span> <span class="o">=</span> <span class="n">rc_params_from_file</span><span class="p">(</span><span class="n">style</span><span class="p">,</span> <span class="n">use_default_template</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span>     <span class="n">_apply_style</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/__init__.py:852,</span> in <span class="ni">rc_params_from_file</span><span class="nt">(fname, fail_on_error, use_default_template)</span>
+<span class="g g-Whitespace">    </span><span class="mi">838</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">839</span><span class="sd"> Construct a `RcParams` from file *fname*.</span>
+<span class="g g-Whitespace">    </span><span class="mi">840</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="nn">    850     parameters specified</span> in <span class="ni">the file. </span><span class="nt">(Useful for updating dicts.)</span>
+<span class="g g-Whitespace">    </span><span class="mi">851</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">852</span> <span class="n">config_from_file</span> <span class="o">=</span> <span class="n">_rc_params_in_file</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="o">=</span><span class="n">fail_on_error</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">854</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">use_default_template</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/__init__.py:778,</span> in <span class="ni">_rc_params_in_file</span><span class="nt">(fname, transform, fail_on_error)</span>
+<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="n">rc_temp</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ne">--&gt; </span><span class="mi">778</span> <span class="k">with</span> <span class="n">_open_file_or_url</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">779</span>     <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/contextlib.py:119,</span> in <span class="ni">_GeneratorContextManager.__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">119</span>     <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span> <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/__init__.py:755,</span> in <span class="ni">_open_file_or_url</span><span class="nt">(fname)</span>
+<span class="g g-Whitespace">    </span><span class="mi">754</span>     <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">755</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">756</span>     <span class="k">yield</span> <span class="n">f</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;seaborn-v0_8&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1">#import matplotlib</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;seaborn-v0_8&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/matplotlib/style/core.py:130,</span> in <span class="ni">use</span><span class="nt">(style)</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span>     <span class="n">_apply_style</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span> <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">130</span>     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="s2">&quot;</span><span class="si">{!r}</span><span class="s2"> not found in the style library and input is not a &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span>         <span class="s2">&quot;valid URL or path; see `style.available` for list of &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s2">&quot;available styles&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">style</span><span class="p">))</span> <span class="kn">from</span> <span class="nn">err</span>
+
+<span class="ne">OSError</span>: &#39;seaborn-v0_8&#39; not found in the style library and input is not a valid URL or path; see `style.available` for list of available styles
 </pre></div>
 </div>
 </div>
@@ -1078,7 +1055,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">10.1. Definición</p>
+        <p class="prev-next-title">Semana 10: Arreglos de NumPy</p>
       </div>
     </a>
     <a class="right-next"
@@ -1107,7 +1084,6 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion">11.1. Definición</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leer-datos-como-arreglos-de-numpy">Leer datos como arreglos de NumPy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creando-figuras-y-ejes">11.2. Creando figuras y ejes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personalizacion-basica-del-grafico">11.3. Personalización básica del gráfico</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambiando-el-estilo-de-graficacion">11.4. Cambiando el estilo de graficación</a></li>
