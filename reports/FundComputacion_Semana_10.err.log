@@ -17,18 +17,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-#Paso 1: abrir el fichero o archivo
-fichero = open('/content/trayectorias.txt','r')
-fichero
+# tipo de dato contenido en el arreglo
+x1.dtype
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Input [0;32mIn [1][0m, in [0;36m<cell line: 2>[0;34m()[0m
-[1;32m      1[0m [38;5;66;03m#Paso 1: abrir el fichero o archivo[39;00m
-[0;32m----> 2[0m fichero [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43m/content/trayectorias.txt[39;49m[38;5;124;43m'[39;49m[43m,[49m[38;5;124;43m'[39;49m[38;5;124;43mr[39;49m[38;5;124;43m'[39;49m[43m)[49m
-[1;32m      3[0m fichero
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Input [0;32mIn [5][0m, in [0;36m<cell line: 2>[0;34m()[0m
+[1;32m      1[0m [38;5;66;03m# tipo de dato contenido en el arreglo[39;00m
+[0;32m----> 2[0m [43mx1[49m[38;5;241m.[39mdtype
 
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/content/trayectorias.txt'
-FileNotFoundError: [Errno 2] No such file or directory: '/content/trayectorias.txt'
+[0;31mNameError[0m: name 'x1' is not defined
+NameError: name 'x1' is not defined
 
