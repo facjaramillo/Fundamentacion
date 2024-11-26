@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'FundComputacion_Semana_9';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10.1. Definición" href="FundComputacion_Semana_10.html" />
     <link rel="prev" title="Semana 8: escritura y lectura de acrhivos con Python" href="FundComputacion_Semana_8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -190,6 +191,13 @@
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_7.html">Semana 7: Conjuntos y Diccionarios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_8.html">Semana 8: escritura y lectura de acrhivos con Python</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Semana 9: Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_10.html">10.1. Definición</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_11.html">Semana 11: Graficación con Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_12.html">Semana 12: Pandas 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FundComputacion_Semana_13.html">Semana 13: Análisis exploratorio de datos con PANDAS y NUMPY</a></li>
 </ul>
 
     </div>
@@ -385,11 +393,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">Funciones en Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-recursivas">Funciones recursivas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-anonimas">Funciones anónimas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">Ejemplos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion">9.1. Definición</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-recursivas">9.2. Funciones recursivas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-anonimas">9.3. Funciones anónimas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">9.4. Ejemplos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">9.5. Ejercicios</a></li>
 </ul>
             </nav>
         </div>
@@ -403,14 +411,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="semana-9-funciones">
 <h1>Semana 9: Funciones<a class="headerlink" href="#semana-9-funciones" title="Link to this heading">#</a></h1>
-<section id="funciones-en-python">
-<h2>Funciones en Python<a class="headerlink" href="#funciones-en-python" title="Link to this heading">#</a></h2>
-<p>Las funciones pueden ser creadas con la sentencia def:</p>
+<section id="definicion">
+<h2>9.1. Definición<a class="headerlink" href="#definicion" title="Link to this heading">#</a></h2>
+<p>Las funciones pueden ser creadas con la sentencia <code class="docutils literal notranslate"><span class="pre">def</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
-   <span class="c1">#tareas-procedimimentos</span>
-   <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;¡Esto es una función!&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">(</span><span class="n">parametros</span><span class="p">):</span>
+  <span class="c1">#tareas-procedimimentos</span>
+  <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;¡Esto es una función!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -425,26 +433,27 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrados</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>   <span class="c1">#Uso de la sentencia def para definir la funcion de nombre &#39;cuadrados&#39;.</span>
   <span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span>
-  <span class="k">return</span> <span class="n">a2</span>    <span class="c1">#Con el return se sentencia que la funcion entregará una salida.</span>
+  <span class="k">return</span> <span class="n">a2</span>     <span class="c1">#Con el return se sentencia que la funcion entregará una salida.</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrados</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">cuadrados</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrados</span><span class="p">(</span><span class="n">lista</span><span class="p">:</span><span class="nb">list</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrados_lista</span><span class="p">(</span><span class="n">lista</span><span class="p">:</span><span class="nb">list</span><span class="p">):</span>
   <span class="n">lista_cuadrados</span> <span class="o">=</span> <span class="p">[]</span>              <span class="c1">#Crea una lista vacía</span>
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>            <span class="c1">#Define un ciclo for ingresando a los elementos de lista</span>
     <span class="n">lista_cuadrados</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>      <span class="c1">#Llena la lista vacía con el cuadrado de los elementos en lista.</span>
@@ -462,7 +471,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrados</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrados_lista</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -474,7 +483,7 @@ document.write(`
 </div>
 </section>
 <section id="funciones-recursivas">
-<h2>Funciones recursivas<a class="headerlink" href="#funciones-recursivas" title="Link to this heading">#</a></h2>
+<h2>9.2. Funciones recursivas<a class="headerlink" href="#funciones-recursivas" title="Link to this heading">#</a></h2>
 <p>La recursividad o recursión es un concepto que proviene de las matemáticas, y que aplicado al mundo de la programación nos permite resolver problemas o tareas donde las mismas pueden ser divididas en subtareas cuya funcionalidad es la misma. Dado que los subproblemas a resolver son de la misma naturaleza, se puede usar la misma función para resolverlos. Dicho de otra manera, una función recursiva es aquella que está definida en función de sí misma, por lo que se llama repetidamente a sí misma hasta llegar a un punto de salida.</p>
 <p>Cualquier función recursiva tiene dos secciones de código claramente divididas:</p>
 <ol class="arabic simple">
@@ -485,14 +494,14 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial_normal</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
-        <span class="n">r</span> <span class="o">*=</span> <span class="n">i</span>
+        <span class="n">factorial</span> <span class="o">*=</span> <span class="n">i</span>
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">r</span>
+    <span class="k">return</span> <span class="n">factorial</span>
 
-<span class="n">factorial_normal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># 120</span>
+<span class="n">factorial_normal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># 120= 1x2x3x4x5</span>
 </pre></div>
 </div>
 </div>
@@ -506,12 +515,12 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial_recursivo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial_recursivo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">factorial_recursivo</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># 120</span>
+<span class="n">factorial_recursivo</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># 120 = 5x4x3x2x1</span>
 </pre></div>
 </div>
 </div>
@@ -532,19 +541,21 @@ document.write(`
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">fibonacci_recursivo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci_recursivo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="n">fibonacci_recursivo</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">fibonacci_recursivo</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="c1"># 0,1,1,2,3,5,8,13,...</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="funciones-anonimas">
-<h2>Funciones anónimas<a class="headerlink" href="#funciones-anonimas" title="Link to this heading">#</a></h2>
+<h2>9.3. Funciones anónimas<a class="headerlink" href="#funciones-anonimas" title="Link to this heading">#</a></h2>
 <p>Las funciones lambda o anónimas son un tipo de funciones en Python que típicamente se definen en una línea y cuyo código a ejecutar suele ser pequeño. Resulta complicado explicar las diferencias, y para que te hagas una idea de ello te dejamos con la siguiente cita sacada de la documentación oficial.</p>
 <p>“Python lambdas are only a shorthand notation if you’re too lazy to define a function.”</p>
 <p>Lo que significa algo así como, “las funciones lambda son simplemente una versión acortada, que puedes usar si te da pereza escribir una función”</p>
@@ -560,7 +571,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># funcion anonima</span>
-<span class="n">cuadrado</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span>    <span class="c1">#Permite definir una función de forma rápida.</span>
+<span class="n">cuadrado</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span>   <span class="c1">#Permite definir una función de forma rápida.</span>
 
 <span class="n">cuadrado</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -574,7 +585,7 @@ document.write(`
 </div>
 </section>
 <section id="ejemplos">
-<h2>Ejemplos<a class="headerlink" href="#ejemplos" title="Link to this heading">#</a></h2>
+<h2>9.4. Ejemplos<a class="headerlink" href="#ejemplos" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Función para determinar si un número es primo o no.</span>
@@ -602,12 +613,12 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primos</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primos</span><span class="p">(</span><span class="mi">525</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 es primo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>525 no es primo, es divisible por 3
 </pre></div>
 </div>
 </div>
@@ -678,7 +689,7 @@ document.write(`
 </div>
 </section>
 <section id="ejercicios">
-<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<h2>9.5. Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Define una función llamada raiz_cubica que devuelva el valor de <span class="math notranslate nohighlight">\(\sqrt[3]{x}\)</span>.</p></li>
 <li><p>Define una función que convierta grados Farenheit en grados celsius.</p></li>
@@ -729,6 +740,15 @@ Además, que calcule la suma desde \)</span>n=1$ hasta ese n-ésimo elemento.</p
         <p class="prev-next-title">Semana 8: escritura y lectura de acrhivos con Python</p>
       </div>
     </a>
+    <a class="right-next"
+       href="FundComputacion_Semana_10.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">10.1. Definición</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -745,11 +765,11 @@ Además, que calcule la suma desde \)</span>n=1$ hasta ese n-ésimo elemento.</p
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">Funciones en Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-recursivas">Funciones recursivas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-anonimas">Funciones anónimas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">Ejemplos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion">9.1. Definición</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-recursivas">9.2. Funciones recursivas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-anonimas">9.3. Funciones anónimas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">9.4. Ejemplos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">9.5. Ejercicios</a></li>
 </ul>
   </nav></div>
 
@@ -764,7 +784,7 @@ Además, que calcule la suma desde \)</span>n=1$ hasta ese n-ésimo elemento.</p
   <div class="footer-item">
     
 <p class="component-author">
-By Fundamentación en Computación 2024
+By Fabio Cardona Jaramillo, Esteban Silva, Juan Vásquez, David Suárez
 </p>
 
   </div>
